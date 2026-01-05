@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Si l'hébergeur sert la racine du projet, on envoie vers /public
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ public/$1 [L]
+
